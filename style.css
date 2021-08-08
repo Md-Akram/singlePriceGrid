@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  background: var(--LightGray);
+}
+
+.card {
+  width: 70%;
+  margin: 50px auto;
+  box-shadow: 0 0 10px grey;
+  border-radius: 5px;
+}
+
+.sec-1 {
+  background: white;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+.sec-1 > h2 {
+  color: var(--Cyan);
+}
+.sec-1 > h3 {
+  color: var(--BrightYellow);
+}
+.sec-1 > p {
+  color: var(--GrayishBlue);
+}
+
+.sec-2 {
+  padding: 20px;
+  background: var(--Cyan);
+}
+.sec-2 > h2 {
+  color: white;
+}
+.sec-2 > .p-1 {
+  color: var(--LightGray);
+}
+.sec-2 > p > span {
+  font-size: 30px;
+  color: white;
+  margin-right: 5px;
+}
+.sec-2 > .p-2 {
+  color: white;
+}
+.sec-2 > button {
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px grey;
+  background: var(--BrightYellow);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.sec-3 {
+  padding: 20px;
+  background: #4abebd;
+  border-radius: 0 0 5px 5px;
+}
+.sec-3 > h2 {
+  color: white;
+}
+.sec-3 > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sec-3 > ul > li {
+  color: var(--LightGray);
+  margin: 3px 0;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      'sec-1 sec-1'
+      'sec-2 sec-3';
+  }
+  .sec-1 {
+    grid-area: sec-1;
+  }
+  .sec-2 {
+    grid-area: sec-2;
+    border-radius: 0 0 0 5px;
+  }
+  .sec-3 {
+    grid-area: sec-3;
+    border-radius: 0 0 5px 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
